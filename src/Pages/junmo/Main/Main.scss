@@ -1,0 +1,224 @@
+.main {
+  height: 100vh;
+  background-color: var(--main--bg--color);
+}
+section .navTop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 18%;
+  background-color: #fff;
+  border-bottom: 1px solid #bbb;
+}
+
+section .navTop .navTopItemLogo .title {
+  font-family: 'Lobster', cursive;
+  font-size: 28px;
+}
+
+section .navTop .navTopItemInput .search {
+  padding: 5px;
+  background-color: var(--main--bg--color);
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  text-align: center;
+  color: #bbb;
+}
+
+input:focus {
+  outline: none;
+}
+
+section .navTop .navTopItemBtn {
+  display: flex;
+  justify-content: space-between;
+}
+
+section .navTop .navTopItemBtn li {
+  margin-right: 10px;
+}
+
+section .navTop .navTopItemBtn li:last-child {
+  margin-right: 0;
+}
+
+section .navTop .navTopItemBtn li img {
+  width: 23px;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 18%;
+}
+
+.main .feed {
+  width: 65%;
+  margin-top: 80px;
+}
+
+.main .feed header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-bottom: none;
+}
+
+.main .feed header .headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.main .feed header .headerLeft .ProfileImg {
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.main .feed .feedImg img {
+  width: 100%;
+}
+
+.main .feed .reaction {
+  margin-top: -5px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-top: none;
+}
+
+.main .feed .reaction .btnBox {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.main .feed .reaction .btnBox .fa-heart,
+.fa-comment,
+.fa-paper-plane {
+  margin-right: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.fa-bookmark {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.main .feed .reaction .paragraphBox p {
+  margin-bottom: 10px;
+}
+
+.main .feed .reaction .paragraphBox p:nth-child(1) {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.main .feed .reaction .paragraphBox .userId {
+  font-weight: 600;
+}
+
+.main .feed .reaction .commentBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .feed .reaction .commentBox .commentInput {
+  width: 90%;
+  border: none;
+}
+
+.main .feed .reaction .commentBox button {
+  padding: 0;
+  background-color: #fff;
+  border: none;
+  color: var(--main--point--color);
+}
+
+.main .aside {
+  position: fixed;
+  top: 80px;
+  right: 18%;
+  width: 20%;
+}
+
+.main .aside .asideProfile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.main .aside .asideProfile .asideProfileLeft {
+  display: flex;
+  align-items: center;
+}
+
+.main .aside .asideProfile .asideProfileLeft img {
+  width: 55px;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+.main .aside .recommend {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.main .aside .recommend div:first-child p {
+  display: inline-block;
+  font-weight: 600;
+  color: #aaa;
+}
+
+.main .aside .userRecommend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.main .aside .userRecommend .userRecommendLeft {
+  display: flex;
+  align-items: center;
+}
+
+.main .aside .userRecommend .userRecommendLeft .userRecommendImg img {
+  width: 40px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.main .aside .userRecommend .userRecommendLeft .userRecommendText p:last-child {
+  color: #bbb;
+}
+
+.main .aside .userRecommend .userRecommendRight p {
+  color: var(--main--point--color);
+  cursor: pointer;
+}
+
+.main .aside .info .infoLink p {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #bbb;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.main .aside .info .copyright {
+  margin-top: 5px;
+  color: #bbb;
+  font-size: 11px;
+}
