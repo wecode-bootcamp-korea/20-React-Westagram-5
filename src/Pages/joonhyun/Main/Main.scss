@@ -1,0 +1,407 @@
+.Main {
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+    border-radius: 1px;
+    margin: 10 auto;
+  }
+  nav .leftWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 60px;
+  }
+  .leftWrapper .instaIcon {
+    align-items: center;
+    margin-right: 20px;
+    padding-right: 30px;
+    border-right: 1px solid rgb(127, 127, 127);
+    font-size: 25px;
+  }
+  .leftWrapper .logTitle {
+    margin-bottom: 10px;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+  }
+
+  .center {
+    position: relative;
+    align-items: center;
+  }
+  .center .search {
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(118, 118, 118);
+    border-radius: 2px;
+    text-align: center;
+  }
+  .center .search:focus {
+    outline: none;
+    border: 1px solid rgb(118, 118, 118);
+  }
+  .center i {
+    position: absolute;
+    top: 4px;
+    left: 31%;
+    font-size: 10px;
+  }
+
+  nav .rightWrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 150px;
+  }
+  .rightWrapper .pic {
+    height: 25px;
+  }
+  main {
+    height: 1000px;
+    background-color: rgb(250, 250, 250);
+  }
+
+  main article {
+    margin: 40px 200px 40px 150px;
+    width: 600px;
+    height: 700px;
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 2px;
+  }
+
+  main .profileTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(227, 227, 227);
+  }
+
+  main .profileImg {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100px;
+  }
+
+  main .profileImg .imgJoon {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 70%;
+  }
+
+  main .profileImg a {
+    text-decoration-line: none;
+    font-size: 15px;
+    color: black;
+  }
+
+  main .profileImg .userId :link {
+    color: black;
+  }
+  main .profileImg .userId :visited {
+    color: black;
+  }
+
+  main .moreBtn {
+    border: none;
+    background-color: rgb(250, 250, 250);
+    margin-right: 20px;
+  }
+  main article .seychelles {
+    width: 598px;
+    height: 350px;
+  }
+  main article .statusCheck {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main article .statusCheck .leftStatusCheck .statusIcon {
+    margin: 2px;
+    font-size: 20px;
+    color: rgb(139, 139, 139);
+  }
+
+  .statusHeart {
+    margin: 5px;
+    font-size: 20px;
+    color: red;
+  }
+
+  main article .statusCheck .rightStatuscheck .download {
+    margin-right: 5px;
+    font-size: 20px;
+    color: rgb(139, 139, 139);
+  }
+
+  main article .otherUsers {
+    display: flex;
+    align-items: center;
+  }
+
+  main article .otherUsers .imgJoon {
+    width: 30px;
+    height: 30px;
+    margin: 4px;
+    border-radius: 70%;
+  }
+
+  main article .otherUsers .userId {
+    font-size: 15px;
+  }
+
+  main article .otherUsers a {
+    text-decoration-line: none;
+    font-size: 15px;
+    color: black;
+  }
+
+  main article .otherUsers .userId :link {
+    color: black;
+  }
+  main article .otherUsers .userId :visited {
+    color: black;
+  }
+
+  main article #commentPlus {
+    margin-top: 10px;
+    padding: 3px;
+    font-size: 15px;
+    border: 1px solid rgb(239, 239, 239);
+  }
+
+  main article #commentPlus .commentUser {
+    font-weight: bold;
+  }
+
+  main article #commentPlus .commentLog {
+    font-size: 13px;
+    color: rgb(169, 169, 169);
+  }
+
+  main article #typeComment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    background-color: rgb(250, 250, 250);
+  }
+  main article #typeComment input {
+    width: 359px;
+    border: none;
+    background-color: rgb(250, 250, 250);
+  }
+  main article #typeComment input:focus {
+    outline: none;
+    border: solid rgb(250, 250, 250);
+  }
+
+  main main article #typeComment span {
+    width: 50px;
+  }
+
+  main article #typeComment button {
+    background-color: rgb(250, 250, 250);
+    border: solid rgb(250, 250, 250);
+    font-size: 13px;
+    width: 50px;
+  }
+
+  .mainRight .myAccount {
+    display: flex;
+    align-items: center;
+  }
+
+  .mainRight {
+    position: fixed;
+    top: 105px;
+    right: 150px;
+    width: 250px;
+    height: 500px;
+  }
+
+  .mainRight .myAccount .spainPic {
+    width: 50px;
+    height: 50px;
+    border-radius: 70%;
+  }
+
+  .mainRight .myAccount a {
+    text-decoration-line: none;
+  }
+
+  .mainRight .myAccount .userId {
+    text-decoration-line: none;
+    margin-left: 10px;
+    font-size: 15px;
+    color: black;
+  }
+  .mainRight .myAccount .userID :link {
+    color: black;
+  }
+  .mainRight .myAccount .userID :visited {
+    color: black;
+  }
+  main .mainRight .story {
+    width: 250px;
+    height: 200px;
+    margin-top: 10px;
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 2px;
+  }
+
+  main .mainRight .storyList {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  main .mainRight .story a {
+    text-decoration-line: none;
+  }
+
+  main .mainRight .story .storyStatus {
+    margin-top: 20px;
+    margin-left: 10px;
+    text-decoration-line: none;
+    font-size: 15px;
+    color: rgb(164, 164, 165);
+  }
+  main .mainRight .story .storyStatus:link {
+    color: rgb(164, 164, 165);
+  }
+  main .story .storyList .storyStatus:visited {
+    color: rgb(164, 164, 165);
+  }
+
+  main .mainRight .story .viewAll {
+    margin-top: 20px;
+    margin-right: 10px;
+    text-decoration-line: none;
+    font-size: 15px;
+    color: black;
+  }
+
+  main .storyHistory1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  main .storyHistory2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  main .storyHistory3 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  main .storyHistory .storyPic {
+    width: 32px;
+    height: 32px;
+    border: 1px solid red;
+    border-radius: 70%;
+    margin: 10px;
+  }
+
+  main .storyHistory .storyImgPic {
+    width: 30px;
+    height: 30px;
+    border-radius: 70%;
+  }
+  main .storyHistory .storyHistory1Info a {
+    text-decoration-line: none;
+  }
+
+  main .storyHistory .storyHistory1Info .userId {
+    font-size: 12px;
+    color: black;
+  }
+  .mainRight .storyHistory .storyHistory1Info .userId:link {
+    color: black;
+  }
+  .mainRight .storyHistory .storyHistory1Info .userId:visited {
+    color: black;
+  }
+
+  main .storyHistory .storyHistory1Info .time {
+    font-size: 12px;
+    color: rgb(164, 164, 165);
+  }
+  .mainRight .storyHistory .storyHistory1Info .time:link {
+    color: rgb(164, 164, 165);
+  }
+  .mainRight .storyHistory .storyHistory1Info .time:visited {
+    color: rgb(164, 164, 165);
+  }
+
+  main .storyHistory .storyHistory2Info a {
+    text-decoration-line: none;
+  }
+
+  main .storyHistory .storyHistory2Info .userId {
+    font-size: 12px;
+    color: black;
+  }
+  .mainRight .storyHistory .storyHistory2Info .userId:link {
+    color: black;
+  }
+  .mainRight .storyHistory .storyHistory2Info .userId:visited {
+    color: black;
+  }
+
+  main .storyHistory .storyHistory2Info .time {
+    font-size: 12px;
+    color: rgb(164, 164, 165);
+  }
+  .mainRight .storyHistory .storyHistory2Info .time:link {
+    color: rgb(164, 164, 165);
+  }
+  .mainRight .storyHistory .storyHistory2Info .time:visited {
+    color: rgb(164, 164, 165);
+  }
+
+  main .storyHistory .storyHistory3Info a {
+    text-decoration-line: none;
+  }
+
+  main .storyHistory .storyHistory3Info .userId {
+    font-size: 12px;
+    color: black;
+  }
+  .mainRight .storyHistory .storyHistory3Info .userId:link {
+    color: black;
+  }
+  .mainRight .storyHistory .storyHistory3Info .userId:visited {
+    color: black;
+  }
+
+  main .storyHistory .storyHistory3Info .time {
+    font-size: 12px;
+    color: rgb(164, 164, 165);
+  }
+  .mainRight .storyHistory .storyHistory3Info .time:link {
+    color: rgb(164, 164, 165);
+  }
+  .mainRight .storyHistory .storyHistory3Info .time:visited {
+    color: rgb(164, 164, 165);
+  }
+
+  footer .detail {
+    margin-top: 10px;
+    font-size: 15px;
+    color: rgb(195, 195, 195);
+  }
+
+  footer .copyright {
+    margin-top: 20px;
+    font-size: 15px;
+    color: rgb(195, 195, 195);
+  }
+}

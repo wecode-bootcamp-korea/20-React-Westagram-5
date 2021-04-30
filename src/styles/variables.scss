@@ -1,0 +1,31 @@
+$borderGrey: rgb(219, 219, 219);
+$textBlackColor: rgb(38, 38, 38);
+$buttonBackground: rgb(178, 223, 252);
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin spaceAround {
+  display: flex;
+  justify-content: space-around;
+}
+
+@mixin columCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin columSpaceAround {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
