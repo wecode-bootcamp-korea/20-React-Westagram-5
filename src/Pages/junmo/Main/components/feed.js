@@ -5,8 +5,8 @@ class Feed extends React.Component {
   render() {
     return (
       <div className="feed">
-        <header>
-          <div className="headerLeft">
+        <header className="feedHeader">
+          <div className="profile">
             <div>
               <img
                 alt="feedProfileImg"
@@ -15,10 +15,10 @@ class Feed extends React.Component {
               />
             </div>
             <div>
-              <p className="nickname">wecode</p>
+              <p className="profileName">wecode</p>
             </div>
           </div>
-          <div className="headerRight">
+          <div className="profileBtn">
             <i className="fas fa-ellipsis-h"></i>
           </div>
         </header>

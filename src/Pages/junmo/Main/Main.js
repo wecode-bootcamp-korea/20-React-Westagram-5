@@ -7,14 +7,12 @@ import Aside from './components/Aside';
 class Main extends React.Component {
   render() {
     return (
-      <div className="main">
-        <section>
-          <Nav></Nav>
-          <main>
-            <Feed></Feed>
-            <Aside></Aside>
-          </main>
-        </section>
+      <div className="main-jm">
+        <Nav></Nav>
+        <main>
+          <Feed></Feed>
+          <Aside></Aside>
+        </main>
       </div>
     );
   }

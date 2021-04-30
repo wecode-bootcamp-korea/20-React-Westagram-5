@@ -4,9 +4,9 @@ import './Aside.scss';
 class Aside extends React.Component {
   render() {
     return (
-      <aside className="aside">
-        <div className="asideProfile">
-          <div className="asideProfileLeft">
+      <aside className="rightAside">
+        <div className="profile">
+          <div className="profileImg">
             <div>
               <img
                 alt="profileImg"
@@ -17,7 +17,7 @@ class Aside extends React.Component {
               <p>wecode</p>
             </div>
           </div>
-          <div class="asideProfileRight">
+          <div class="profileBtn">
             <p>전환</p>
           </div>
         </div>
@@ -30,7 +30,7 @@ class Aside extends React.Component {
           </div>
         </div>
         <div className="userRecommend">
-          <div className="userRecommendLeft">
+          <div className="userRecommendProfile">
             <div className="userRecommendImg">
               <img
                 alt="profileImg"
@@ -42,12 +42,12 @@ class Aside extends React.Component {
               <p>junmopark님이 팔로우합니다</p>
             </div>
           </div>
-          <div className="userRecommendRight">
+          <div className="userRecommendBtn">
             <p>팔로우</p>
           </div>
         </div>
         <div className="userRecommend">
-          <div className="userRecommendLeft">
+          <div className="userRecommendProfile">
             <div className="userRecommendImg">
               <img
                 alt="profileImg"
@@ -59,12 +59,12 @@ class Aside extends React.Component {
               <p>junmopark님이 팔로우합니다</p>
             </div>
           </div>
-          <div className="userRecommendRight">
+          <div className="userRecommendBtn">
             <p>팔로우</p>
           </div>
         </div>
         <div className="userRecommend">
-          <div className="userRecommendLeft">
+          <div className="userRecommendProfile">
             <div className="userRecommendImg">
               <img
                 alt="profileImg"
@@ -76,12 +76,12 @@ class Aside extends React.Component {
               <p>junmopark님이 팔로우합니다</p>
             </div>
           </div>
-          <div className="userRecommendRight">
+          <div className="userRecommendBtn">
             <p>팔로우</p>
           </div>
         </div>
         <div className="userRecommend">
-          <div className="userRecommendLeft">
+          <div className="userRecommendProfile">
             <div className="userRecommendImg">
               <img
                 alt="profileImg"
@@ -93,7 +93,7 @@ class Aside extends React.Component {
               <p>junmopark님이 팔로우합니다</p>
             </div>
           </div>
-          <div class="userRecommendRight">
+          <div class="userRecommendBtn">
             <p>팔로우</p>
           </div>
         </div>

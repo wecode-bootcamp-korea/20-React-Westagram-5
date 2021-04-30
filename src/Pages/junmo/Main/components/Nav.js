@@ -4,14 +4,14 @@ import './Nav.scss';
 class Nav extends React.Component {
   render() {
     return (
-      <nav className="navTop">
-        <header className="navTopItemLogo">
+      <nav className="topNav">
+        <header className="logo">
           <h1 className="title">Instagram</h1>
         </header>
-        <div className="navTopItemInput">
+        <div className="input">
           <input type="text" className="search" placeholder="검색" />
         </div>
-        <ul className="navTopItemBtn">
+        <ul className="btn">
           <li>
             <img
               alt="quest"

@@ -1,0 +1,88 @@
+.feed {
+  margin-top: 80px;
+
+  .feedHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-bottom: none;
+
+    .profile {
+      display: flex;
+      align-items: center;
+
+      .ProfileImg {
+        width: 30px;
+        margin-right: 10px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .feedImg {
+    img {
+      width: 100%;
+    }
+  }
+
+  .reaction {
+    margin-top: -5px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-top: none;
+
+    .btnBox {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+
+      .fa-heart,
+      .fa-comment,
+      .fa-paper-plane {
+        margin-right: 10px;
+        font-size: 25px;
+        cursor: pointer;
+      }
+
+      .fa-bookmark {
+        font-size: 25px;
+        cursor: pointer;
+      }
+    }
+
+    .paragraphBox {
+      p {
+        margin-bottom: 10px;
+      }
+
+      p:nth-child(1) {
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      .userId {
+        font-weight: 600;
+      }
+    }
+    .commentBox {
+      display: flex;
+      justify-content: space-between;
+
+      .commentInput {
+        width: 90%;
+        border: none;
+      }
+
+      button {
+        padding: 0;
+        background-color: #fff;
+        border: none;
+        color: var(--main--point--color);
+      }
+    }
+  }
+}
