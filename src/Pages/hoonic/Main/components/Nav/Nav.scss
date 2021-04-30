@@ -1,0 +1,36 @@
+.navHoonic {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  border-bottom: 1px solid #dbdbdb;
+
+  .navTop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 975px;
+    height: 54px;
+  }
+
+  .instaImg {
+    width: 103px;
+    height: 50px;
+  }
+
+  .searchBar {
+    text-align: center;
+    width: 215px;
+    height: 28px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    color: #8e8e8e;
+  }
+
+  .navRightIcon {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 222px;
+    height: 22px;
+  }
+}
