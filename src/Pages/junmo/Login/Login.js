@@ -63,15 +63,3 @@ class Login extends React.Component {
 }
 
 export default withRouter(Login);
-
-//btnActive = () => {
-// state 클래스 변경
-// state disabled 값 false
-//}
-
-//btnActive = () => {
-// state 클래스 변경
-// state disabled 값 ture
-//}
-
-// className={this.id.includes('@') && this.pw.length > 5 ? ture : false}
