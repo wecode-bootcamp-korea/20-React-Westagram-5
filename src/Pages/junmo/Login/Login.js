@@ -15,14 +15,12 @@ class Login extends React.Component {
     this.setState({
       id: e.target.value,
     });
-    console.log(this.state.id);
   };
 
   handlePwInput = e => {
     this.setState({
       pw: e.target.value,
     });
-    console.log(this.state.pw);
   };
   render() {
     return (
