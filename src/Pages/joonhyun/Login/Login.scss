@@ -41,7 +41,7 @@
           border: 1px solid $borderGrey;
         }
       }
-      button#userLoginBtn {
+      button.keepButtonColor {
         background-color: $buttonBackground;
         width: 628.97px;
         height: 70px;
@@ -55,6 +55,22 @@
         &:focus {
           outline: none;
           border: 1px solid rgb(178, 223, 252);
+        }
+      }
+      button.changeButtonColor {
+        background-color: rgb(25, 151, 243);
+        width: 628.97px;
+        height: 70px;
+        border: none;
+        border-radius: 3px;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+
+        &:focus {
+          outline: none;
+          border: 1px solid rgb(25, 151, 243);
         }
       }
     }

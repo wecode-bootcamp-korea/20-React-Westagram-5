@@ -8,6 +8,7 @@ class Loginjoonhyun extends React.Component {
     this.state = {
       idInputValue: '',
       pwInputValue: '',
+      disabled: true,
     };
   }
 
@@ -23,8 +24,11 @@ class Loginjoonhyun extends React.Component {
     });
   };
 
+  goToMain = () => {
+    this.props.history.push('/Main-joonhyun');
+  };
+
   render() {
-    console.log(this.state);
     return (
       <div className="loginJoonhyun">
         <main className="logMain" role="main">
@@ -42,7 +46,22 @@ class Loginjoonhyun extends React.Component {
               placeholder="비밀번호"
               onChange={this.handlePwInput}
             />
-            <button id="userLoginBtn" type="button">
+            <button
+              className={
+                this.state.idInputValue.indexOf('@') !== -1 &&
+                this.state.pwInputValue.length > 5
+                  ? 'changeButtonColor'
+                  : 'keepButtonColor'
+              }
+              disabled={
+                this.state.idInputValue.indexOf('@') !== -1 &&
+                this.state.pwInputValue.length > 5
+                  ? false
+                  : true
+              }
+              onClick={this.goToMain}
+              type="button"
+            >
               로그인
             </button>
           </form>
