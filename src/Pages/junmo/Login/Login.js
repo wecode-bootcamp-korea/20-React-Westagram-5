@@ -22,6 +22,7 @@ class Login extends React.Component {
       pw: e.target.value,
     });
   };
+
   render() {
     return (
       <div className="login">
@@ -42,7 +43,17 @@ class Login extends React.Component {
               type="password"
               placeholder="비밀번호"
             />
-            <div className="loginBtn">로그인</div>
+            <button
+              className="loginBtn"
+              disabled
+              disabled={
+                this.state.id.includes('@') && this.state.pw.length >= 5
+                  ? false
+                  : true
+              }
+            >
+              로그인
+            </button>
             <button className="forgotPwBtn">비밀번호를 잊으셨나요?</button>
           </form>
         </section>
@@ -52,3 +63,15 @@ class Login extends React.Component {
 }
 
 export default withRouter(Login);
+
+//btnActive = () => {
+// state 클래스 변경
+// state disabled 값 false
+//}
+
+//btnActive = () => {
+// state 클래스 변경
+// state disabled 값 ture
+//}
+
+// className={this.id.includes('@') && this.pw.length > 5 ? ture : false}
