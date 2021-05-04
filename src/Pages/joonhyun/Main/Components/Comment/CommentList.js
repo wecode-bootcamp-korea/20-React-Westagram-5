@@ -1,6 +1,7 @@
 import React from 'react';
+import CommentInputList from './commentInputList';
+import CommentInput from './CommentInput';
 import './CommentList.scss';
-import CommentInput from './commentInput';
 
 class CommentList extends React.Component {
   constructor() {
@@ -45,7 +46,11 @@ class CommentList extends React.Component {
 
   addComment = () => {
     this.setState({
-      commentList: this.state.commentList.concat(this.state.inputComment),
+      commentList: this.state.commentList.concat({
+        id: 'wecode20',
+        time: '10분',
+        comment: this.state.inputComment,
+      }),
       inputComment: '',
     });
   };
@@ -56,19 +61,20 @@ class CommentList extends React.Component {
         <div className="commentPlus">
           {this.state.replyDatas.map(element => {
             const { id, reply, time } = element;
-            return <CommentInput id={id} reply={reply} time={time} />;
+            return <CommentInputList id={id} reply={reply} time={time} />;
           })}
         </div>
         <div id="typeComment">
-          {this.state.commentList.map(e => {
+          {this.state.commentList.map(commentInfo => {
             return (
-              <div className="newInput">
-                <span className="inputId">wecode20</span>
-                <span className="inputMessage">{e}</span>
-                <span className="inputTime">10분전</span>
-              </div>
+              <CommentInput
+                id={commentInfo.id}
+                time={commentInfo.time}
+                comment={commentInfo.comment}
+              />
             );
           })}
+
           <div className="inputComment">
             <input
               value={this.state.inputComment}

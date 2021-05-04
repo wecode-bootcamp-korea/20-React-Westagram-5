@@ -1,5 +1,5 @@
 import React from 'react';
-import './commentInput.scss';
+import './CommentInput.scss';
 
 class CommentInput extends React.Component {
   constructor() {
@@ -8,15 +8,13 @@ class CommentInput extends React.Component {
   }
 
   render() {
-    const { id, reply, time } = this.props;
+    console.log(this.props);
     return (
-      <>
-        <div className="commentPlus">
-          <span className="id">{id}</span>
-          <span className="reply">{reply}</span>
-          <span className="time">{time}</span>
-        </div>
-      </>
+      <div className="inputAcutalComment">
+        <span className="inputId">{this.props.id}</span>
+        <span className="inputMessage ">{this.props.comment}</span>
+        <span className="inputTime">{this.props.time}</span>
+      </div>
     );
   }
 }

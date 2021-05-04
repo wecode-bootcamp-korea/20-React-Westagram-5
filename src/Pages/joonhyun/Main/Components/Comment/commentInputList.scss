@@ -1,16 +1,20 @@
 @import '../../../../../styles/variables.scss';
 
-.inputAcutalComment {
+.commentPlus {
+  align-items: center;
   margin-top: 5px;
-  .inputId {
+
+  .id {
     font-weight: bold;
-    margin-left: 3px;
+    margin-left: 10px;
     margin-right: 10px;
   }
-  .inputMessage {
+
+  .reply {
     margin-right: 10px;
   }
-  .inputTime {
+
+  .time {
     color: rgb(170, 170, 170);
     font-size: 14px;
   }
