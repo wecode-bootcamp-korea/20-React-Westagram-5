@@ -1,6 +1,6 @@
 import React from 'react';
 import './Article.scss';
-import Comment from '../Comment/Comment';
+import CommentList from '../Comment/CommentList';
 
 class Article extends React.Component {
   render() {
@@ -59,11 +59,11 @@ class Article extends React.Component {
           </a>
           <a href="#/">
             <span className="userId">
-              <strong>wecode22</strong>님 외 <strong>10명</strong>이 좋아합니다.{' '}
+              <strong>wecode22</strong>님 외 <strong>10명</strong>이 좋아합니다.
             </span>
           </a>
         </div>
-        <Comment />
+        <CommentList />
       </article>
     );
   }
