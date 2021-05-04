@@ -1,4 +1,5 @@
 import React from 'react';
+import Comments from './comments';
 import './feed.scss';
 
 class Feed extends React.Component {
@@ -47,14 +48,7 @@ class Feed extends React.Component {
             </p>
             <ul className="commentsList"></ul>
           </div>
-          <form className="commentBox">
-            <input
-              className="commentInput"
-              type="text"
-              placeholder="댓글 달기..."
-            />
-            <button className="commentAddBtn">게시</button>
-          </form>
+          <Comments />
         </div>
       </div>
     );

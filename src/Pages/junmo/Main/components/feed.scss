@@ -68,21 +68,5 @@
         font-weight: 600;
       }
     }
-    .commentBox {
-      display: flex;
-      justify-content: space-between;
-
-      .commentInput {
-        width: 90%;
-        border: none;
-      }
-
-      button {
-        padding: 0;
-        background-color: #fff;
-        border: none;
-        color: var(--main--point--color);
-      }
-    }
   }
 }
