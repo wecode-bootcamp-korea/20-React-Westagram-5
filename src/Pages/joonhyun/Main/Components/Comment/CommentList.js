@@ -61,13 +61,16 @@ class CommentList extends React.Component {
         <div className="commentPlus">
           {this.state.replyDatas.map(element => {
             const { id, reply, time } = element;
-            return <CommentInputList id={id} reply={reply} time={time} />;
+            return (
+              <CommentInputList key={id} id={id} reply={reply} time={time} />
+            );
           })}
         </div>
         <div id="typeComment">
           {this.state.commentList.map(commentInfo => {
             return (
               <CommentInput
+                key={commentInfo.id}
                 id={commentInfo.id}
                 time={commentInfo.time}
                 comment={commentInfo.comment}
