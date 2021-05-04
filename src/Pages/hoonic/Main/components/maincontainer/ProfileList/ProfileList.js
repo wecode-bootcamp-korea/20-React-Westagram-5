@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProfileList';
+import './ProfileList.scss';
 
 class ProfileListHoonic extends React.Component {
   render() {

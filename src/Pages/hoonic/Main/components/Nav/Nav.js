@@ -4,7 +4,7 @@ import './Nav.scss';
 class NavHoonic extends React.Component {
   render() {
     return (
-      <nav className="navhoonic">
+      <nav className="navHoonic">
         <div className="navTop">
           <img
             alt="insta logo"

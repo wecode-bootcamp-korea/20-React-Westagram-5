@@ -1,0 +1,110 @@
+article {
+  display: inline-block;
+  background-color: white;
+  width: 616px;
+  border: 1px solid #dbdbdb;
+
+  .feedHeader {
+    display: flex;
+    align-items: center;
+    width: 614px;
+    height: 60px;
+    background-color: white;
+  }
+
+  .feedHeaderText {
+    position: relative;
+    left: 25px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .feedHeader img {
+    position: relative;
+    left: 15px;
+    width: 32px;
+    height: 32px;
+    border-radius: 70%;
+  }
+
+  .feedImage {
+    width: 614px;
+    height: 614px;
+    background-color: green;
+  }
+
+  .feedImage img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .iconBar {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: white;
+  }
+
+  .iconBar img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .iconBarHeart {
+    position: relative;
+    left: 15px;
+  }
+
+  .iconBarChat {
+    position: relative;
+    left: 30px;
+  }
+
+  .iconBarDm {
+    position: relative;
+    left: 40px;
+  }
+
+  .iconBarBookMark {
+    position: relative;
+    left: 505px;
+  }
+
+  .likeCount {
+    margin: 0px 15px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .comment {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 56px;
+    padding: 0px 10px;
+    border-top: 1px solid #dbdbdb;
+  }
+
+  .commentInput {
+    width: 500px;
+    outline: none;
+    border: none;
+  }
+
+  .commentButton {
+    font-weight: 600;
+    outline: none;
+    border: none;
+    background-color: white;
+    color: #0095f6;
+
+    &:disabled {
+      color: #b2dffc;
+    }
+  }
+
+  //   .buttonActive {
+  //     color: rgb(0, 149, 246);
+  //   }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Aside';
+import './Aside.scss';
 
 class AsideHoonic extends React.Component {
   render() {
