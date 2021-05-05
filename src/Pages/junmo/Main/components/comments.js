@@ -10,6 +10,19 @@ class Comments extends React.Component {
       commentList: [],
     };
   }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/data/junmopark/mockdata.json', {
+      method: 'Get',
+    })
+      .then(res => res.json())
+      .then(mockdata => {
+        this.setState({
+          commentList: mockdata,
+        });
+      });
+  }
+
   inputHandler = e => {
     this.setState({
       inputComment: e.target.value,
