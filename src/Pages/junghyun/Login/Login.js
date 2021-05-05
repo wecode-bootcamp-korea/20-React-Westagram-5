@@ -8,8 +8,13 @@ class Loginjunghyun extends React.Component {
     this.state = {
       idValue: '',
       pwValue: '',
+      isButtonActive: false,
     };
   }
+
+  goToMain = () => {
+    this.props.history.push('/Main-junghyun');
+  };
 
   handleIdPwInput = e => {
     this.setState({
@@ -17,8 +22,11 @@ class Loginjunghyun extends React.Component {
     });
   };
 
-  goToMain = () => {
-    this.props.history.push('/Main-junghyun');
+  changeColorBtn = () => {
+    const { idValue, pwValue } = this.state;
+    idValue.includes('@') && pwValue.length >= 5
+      ? this.setState({ isButtonActive: true })
+      : this.setState({ isButtonActive: false });
   };
 
   render() {
@@ -35,6 +43,7 @@ class Loginjunghyun extends React.Component {
                 type="text"
                 placeholder="전화번호, 사용자 이름 또는 이메일"
                 onChange={this.handleIdPwInput}
+                onKeyUp={this.changeColorBtn}
                 name="idValue"
               />
               <input
@@ -42,12 +51,19 @@ class Loginjunghyun extends React.Component {
                 type="password"
                 placeholder="비밀번호"
                 onChange={this.handleIdPwInput}
+                onKeyUp={this.changeColorBtn}
                 name="pwValue"
               />
             </div>
           </form>
           <section className="loginButton">
-            <button id="loginBtn" type="button" onClick={this.goToMain}>
+            <button
+              type="button"
+              onClick={this.goToMain}
+              className={
+                this.state.isButtonActive ? 'activated' : 'deactivated'
+              }
+            >
               로그인
             </button>
           </section>

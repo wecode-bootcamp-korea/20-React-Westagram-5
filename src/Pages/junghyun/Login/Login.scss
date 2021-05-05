@@ -38,7 +38,7 @@
       }
     }
     .loginButton {
-      #loginBtn {
+      button {
         display: block;
         width: 300px;
         margin-top: 8px;
@@ -47,11 +47,14 @@
         color: white;
         border: 1px solid skyblue;
         border-radius: 5px;
-        background-color: skyblue;
+      }
 
-        &:hover {
-          background-color: $point-color;
-        }
+      .activated {
+        background-color: $point-color;
+      }
+
+      .deactivated {
+        background-color: $bg-color;
       }
     }
 
