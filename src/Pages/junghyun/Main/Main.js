@@ -2,6 +2,31 @@ import React from 'react';
 import './Main.scss';
 
 class Mainjunghyun extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      inputComment: '',
+      commentList: [],
+    };
+  }
+
+  handleCommentInput = e => {
+    if (e.key === 'Enter') {
+      this.addComment();
+    } else {
+      this.setState({
+        inputComment: e.target.value,
+      });
+    }
+  };
+
+  addComment = () => {
+    this.setState({
+      commentList: this.state.commentList.concat(this.state.inputComment),
+      inputComment: '',
+    });
+  };
+
   render() {
     return (
       <>
@@ -58,13 +83,23 @@ class Mainjunghyun extends React.Component {
                     neceosecius 거봐 좋았잖아~~~~
                   </li>
                 </ul>
+                <div className="commentList">
+                  {this.state.commentList.map(el => {
+                    return <li>{el}</li>;
+                  })}
+                </div>
                 <div>
                   <input
-                    id="writeComment"
+                    className="writeComment"
                     type="text"
                     placeholder="댓글 달기 ..."
+                    onChange={this.handleCommentInput}
+                    onKeyPress={this.handleCommentInput}
+                    value={this.state.inputComment}
                   />
-                  <button className="postButton">게시</button>
+                  <button className="postButton" onClick={this.addComment}>
+                    게시
+                  </button>
                 </div>
               </section>
             </article>
