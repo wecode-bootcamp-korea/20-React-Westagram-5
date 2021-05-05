@@ -11,15 +11,9 @@ class Loginjunghyun extends React.Component {
     };
   }
 
-  handleIdInput = e => {
+  handleIdPwInput = e => {
     this.setState({
-      idValue: e.target.value,
-    });
-  };
-
-  handlePwInput = e => {
-    this.setState({
-      pwValue: e.target.value,
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -40,13 +34,15 @@ class Loginjunghyun extends React.Component {
                 id="loginId"
                 type="text"
                 placeholder="전화번호, 사용자 이름 또는 이메일"
-                onChange={this.handleIdInput}
+                onChange={this.handleIdPwInput}
+                name="idValue"
               />
               <input
                 id="loginPassword"
                 type="password"
                 placeholder="비밀번호"
-                onChange={this.handlePwInput}
+                onChange={this.handleIdPwInput}
+                name="pwValue"
               />
             </div>
           </form>
