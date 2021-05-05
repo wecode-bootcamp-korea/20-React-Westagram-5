@@ -7,31 +7,20 @@ class CommentList extends React.Component {
   constructor() {
     super();
     this.state = {
-      replyDatas: [
-        {
-          id: 'junchi111',
-          reply: '여행 가고 싶으다아~~~~',
-          time: '20분전',
-        },
-        {
-          id: 'koko',
-          reply: '나아두~~',
-          time: '16분전',
-        },
-        {
-          id: '565sddf212s',
-          reply: '내일 고?',
-          time: '15분전',
-        },
-        {
-          id: '5221dsa',
-          reply: '고고',
-          time: '12분전',
-        },
-      ],
       inputComment: '',
       commentList: [],
+      mockCommentList: [],
     };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/images/joonhyun/data/commentData.json')
+      .then(res => res.json())
+      .then(res => {
+        this.setState({
+          mockCommentList: res.replyData,
+        });
+      });
   }
 
   inputHandler = e => {
@@ -56,10 +45,11 @@ class CommentList extends React.Component {
   };
 
   render() {
+    console.log(this.state.mockCommentList);
     return (
       <>
         <div className="commentPlus">
-          {this.state.replyDatas.map(element => {
+          {this.state.mockCommentList.map(element => {
             const { id, reply, time } = element;
             return (
               <CommentInputList key={id} id={id} reply={reply} time={time} />
