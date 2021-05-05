@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentValue from './commentValue';
 import './comments.scss';
 
 class Comments extends React.Component {
@@ -15,20 +16,22 @@ class Comments extends React.Component {
     });
   };
   addComment = e => {
+    const { commentList, inputComment } = this.state;
     e.preventDefault();
     this.setState({
-      commentList: this.state.commentList.concat(this.state.inputComment),
+      commentList: commentList.concat(inputComment),
       inputComment: '',
     });
   };
 
   render() {
+    const { commentList } = this.state;
     return (
       <>
         <div className="commentsList">
           <ul>
-            {this.state.commentList.map(el => {
-              return <li>{el}</li>;
+            {this.state.commentList.map(commentList => {
+              return <CommentValue value={commentList} />;
             })}
           </ul>
         </div>

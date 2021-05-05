@@ -46,7 +46,6 @@ class Feed extends React.Component {
               <span class="userId">wecode_bootcamp</span> 위코드는 단순
               교육업체가 아닌 개발자 커뮤니티입니다.
             </p>
-            <ul className="commentsList"></ul>
           </div>
           <Comments />
         </div>
