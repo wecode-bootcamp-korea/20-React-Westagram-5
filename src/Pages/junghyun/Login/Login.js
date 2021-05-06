@@ -14,6 +14,26 @@ class Loginjunghyun extends React.Component {
 
   goToMain = () => {
     this.props.history.push('/Main-junghyun');
+    // console.log('패치해주세요');
+
+    // fetch('http://10.58.0.184:8000/user/signin', {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     email: this.state.idValue,
+    //     password: this.state.pwValue,
+    //     phonenumber: '010-3263-2769',
+    //     nickname: 'wecode1',
+    //   }),
+    // })
+    //   .then(response => response.json())
+    // .then(result => console.log('결과: ', result));
+    //     .then(result => {
+    //       if (result.MESSAGE === 'SUCCESS') {
+    //         localStorage.setItem('token', result.token);
+    //       } else {
+    //         alert('아이디나 비밀번호를 확인해주세요');
+    //       }
+    //     });
   };
 
   handleIdPwInput = e => {

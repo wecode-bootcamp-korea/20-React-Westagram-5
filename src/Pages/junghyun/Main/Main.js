@@ -1,4 +1,5 @@
 import React from 'react';
+import Comment from '../Main/components/Comment';
 import './Main.scss';
 
 class Mainjunghyun extends React.Component {
@@ -85,22 +86,20 @@ class Mainjunghyun extends React.Component {
                 </ul>
                 <div className="commentList">
                   {this.state.commentList.map(el => {
-                    return <li>{el}</li>;
+                    return <Comment newComment={el} />;
                   })}
                 </div>
-                <div>
-                  <input
-                    className="writeComment"
-                    type="text"
-                    placeholder="댓글 달기 ..."
-                    onChange={this.handleCommentInput}
-                    onKeyPress={this.handleCommentInput}
-                    value={this.state.inputComment}
-                  />
-                  <button className="postButton" onClick={this.addComment}>
-                    게시
-                  </button>
-                </div>
+                <input
+                  className="writeComment"
+                  type="text"
+                  placeholder="댓글 달기 ..."
+                  onChange={this.handleCommentInput}
+                  onKeyPress={this.handleCommentInput}
+                  value={this.state.inputComment}
+                />
+                <button className="postButton" onClick={this.addComment}>
+                  게시
+                </button>
               </section>
             </article>
           </div>
