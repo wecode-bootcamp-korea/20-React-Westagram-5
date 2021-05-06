@@ -1,0 +1,22 @@
+@import '../../../../../styles/variables.scss';
+
+.storyHistory {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .storyPic {
+    display: flex;
+    flex-direction: column;
+
+    .storyImgPic {
+      width: 32px;
+      height: 32px;
+      border-radius: 70%;
+    }
+  }
+  .storyHistoryInfo {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -12,6 +12,18 @@ class Loginjoonhyun extends React.Component {
     };
   }
 
+  // requestLogin = () => {
+  //   fetch('http://10.58.7.242:8000/users/signUp', {
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       email: this.state.idInputValue,
+  //       password: this.state.pwInputValue,
+  //     }),
+  //   })
+  //     .then(response => response.json())
+  //     .then(result => console.log('결과: ', result));
+  // };
+
   handleIdInput = event => {
     this.setState({
       idInputValue: event.target.value,
@@ -24,8 +36,32 @@ class Loginjoonhyun extends React.Component {
     });
   };
 
-  goToMain = () => {
-    this.props.history.push('/Main-joonhyun');
+  goToMain = e => {
+    e.preventDefault();
+    fetch('http://10.58.7.242:8000/users/signIn', {
+      method: 'POST',
+      headers: {
+        Authorization: 'userInfo',
+      },
+      body: JSON.stringify({
+        email: this.state.idInputValue,
+        password: this.state.pwInputValue,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.toke) {
+          localStorage.setItem('wtw-token', result.token);
+        }
+
+        if (result.result === 'SUCCESS') {
+          return this.props.history.push('/Main-joonhyun');
+        }
+
+        if (result.result === 'INVALID_USER') {
+          return alert('비밀번호 또는 이메일이 잘 못 되었습니다.');
+        }
+      });
   };
 
   render() {

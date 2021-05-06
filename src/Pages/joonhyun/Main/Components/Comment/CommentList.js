@@ -45,7 +45,6 @@ class CommentList extends React.Component {
   };
 
   render() {
-    console.log(this.state.mockCommentList);
     return (
       <>
         <div className="commentPlus">

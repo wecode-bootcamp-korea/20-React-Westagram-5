@@ -1,0 +1,24 @@
+{
+  "feedData": [
+    {
+      "id": "Python.py",
+      "imgSRC": "s"
+    },
+    {
+      "id": "Javascript.js",
+      "imgSRC": "s"
+    },
+    {
+      "id": "Mockdata",
+      "imgSRC": "s"
+    },
+    {
+      "id": "Node.Js",
+      "imgSRC": "s"
+    },
+    {
+      "id": "Fighting",
+      "imgSRC": "s"
+    }
+  ]
+}

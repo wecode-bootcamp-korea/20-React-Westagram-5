@@ -1,7 +1,25 @@
 import React from 'react';
+import StoryList from './StoryList';
 import './Story.scss';
 
 class Story extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      storyList: [],
+    };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/images/joonhyun/data/storyList.json')
+      .then(storyData => storyData.json())
+      .then(storyData => {
+        this.setState({
+          storyList: storyData.storyListData,
+        });
+      });
+  }
+
   render() {
     return (
       <div className="storyJoonhyun">
@@ -15,71 +33,10 @@ class Story extends React.Component {
         </div>
 
         <div className="storyHistory">
-          <div className="storyHistory1">
-            <div className="storyPic">
-              <a href="#/">
-                <img
-                  className="storyImgPic"
-                  alt="tokyo"
-                  src="/images//joonhyun/tokyo.jpg"
-                />
-              </a>
-            </div>
-            <div className="storyHistory1Info">
-              <a href="#/">
-                <div className="userId">
-                  <strong>Tokyo</strong>
-                </div>
-              </a>
-              <a href="#/">
-                <div className="time">16분전</div>
-              </a>
-            </div>
-          </div>
-          <div className="storyHistory2">
-            <div className="storyPic">
-              <a href="#/">
-                <img
-                  className="storyImgPic"
-                  alt="paris"
-                  src="/images//joonhyun/paris.jpg"
-                />
-              </a>
-            </div>
-
-            <div className="storyHistory2Info">
-              <a href="#/">
-                <div className="userId">
-                  <strong>Paris</strong>
-                </div>
-              </a>
-              <a href="#/">
-                <div className="time">20분전</div>
-              </a>
-            </div>
-          </div>
-          <div className="storyHistory3">
-            <div className="storyPic">
-              <a href="#/">
-                <img
-                  className="storyImgPic"
-                  alt="nhatrang"
-                  src="/images/joonhyun/nhatrang.jpg"
-                />
-              </a>
-            </div>
-
-            <div className="storyHistory3Info">
-              <a href="#/">
-                <div className="userId">
-                  <strong>Nhatrang</strong>
-                </div>
-              </a>
-              <a href="#/">
-                <div className="time">23분전</div>
-              </a>
-            </div>
-          </div>
+          {this.state.storyList.map(element => {
+            const { FK, id, time, imgSrc } = element;
+            return <StoryList key={FK} id={id} time={time} imgSrc={imgSrc} />;
+          })}
         </div>
       </div>
     );
