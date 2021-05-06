@@ -1,4 +1,5 @@
 import React from 'react';
+import Comment from '../../Comments/Comment';
 import './Article.scss';
 
 class ArticleHoonic extends React.Component {
@@ -11,7 +12,7 @@ class ArticleHoonic extends React.Component {
   }
 
   addCommentEnter = e => {
-    if (this.state.commentValue >= 1 && e.key === 'Enter') {
+    if (this.state.commentValue.length >= 1 && e.key === 'Enter') {
       this.addComment();
     } else {
       this.setState({ commentValue: e.target.value });
@@ -21,11 +22,13 @@ class ArticleHoonic extends React.Component {
   addComment = () => {
     this.setState({
       commentList: this.state.commentList.concat([this.state.commentValue]),
+      // commentList: [...commentList, commentValue] 스프레이드 연산자
       commentValue: '',
     });
   };
 
   render() {
+    const { commentValue, commentList } = this.state;
     console.log('state >>>>>>>>', this.state);
     return (
       <article>
@@ -57,14 +60,14 @@ class ArticleHoonic extends React.Component {
         <p className="likeCount">좋아요 55,555개</p>
         <div divclassName="commentLists">
           <div className="chatList">
-            <li>hoonic</li>
-            <li>Hoon</li>
-            {this.state.commentList.map(el => {
-              return <li>{el}</li>;
+            <span className="commentID">hoonic</span>
+            <span>안녕하세요</span>
+            {commentList.map(el => {
+              return <Comment userName={el} comment={el} />;
             })}
           </div>
         </div>
-        <div className="comment">
+        <div className="commentPage">
           <img
             alt="happyicon"
             src="/images/hoonic/free-icon-happy-569501.png"
@@ -73,13 +76,13 @@ class ArticleHoonic extends React.Component {
             className="commentInput"
             type="text"
             placeholder="댓글 달기..."
-            value={this.state.commentValue}
+            value={commentValue}
             onChange={this.addCommentEnter}
             onKeyPress={this.addCommentEnter}
           />
           <button
             className="commentButton"
-            disabled={this.state.commentValue.length >= 1 ? false : true}
+            disabled={commentValue.length >= 1 ? false : true}
             onClick={this.addComment}
           >
             게시

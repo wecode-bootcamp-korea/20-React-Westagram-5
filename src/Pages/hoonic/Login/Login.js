@@ -19,9 +19,29 @@ class LoginHoonic extends React.Component {
     this.setState({ pwValue: e.target.value });
   };
 
-  goToMain = () => {
-    this.props.history.push('/Main-hoonic');
+  handleSubmit = e => {
+    e.preventDefault();
+    fetch('http://10.58.1.54:8000/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: this.state.idValue,
+        password: this.state.pwValue,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.MESSAGE === 'SUSSES') {
+          this.props.history.push('/Main-hoonic');
+          console.log(result);
+        } else {
+          alert('확인해주세요');
+        }
+      });
   };
+
+  // goToMain = () => {
+  //   this.props.history.push('/Main-hoonic');
+  // };
   render() {
     console.log('state >>>>>>>>', this.state.PwValue);
     return (
@@ -48,7 +68,7 @@ class LoginHoonic extends React.Component {
                 ? false
                 : true
             }
-            onClick={this.goToMain}
+            onClick={this.handleSubmit}
           >
             로그인
           </button>

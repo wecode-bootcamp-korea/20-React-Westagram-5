@@ -77,7 +77,7 @@ article {
     font-weight: 500;
   }
 
-  .comment {
+  .commentPage {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -104,7 +104,13 @@ article {
     }
   }
 
-  //   .buttonActive {
-  //     color: rgb(0, 149, 246);
-  //   }
+  .chatList {
+    padding: 10px;
+
+    .commentID {
+      font-weight: bold;
+      padding-right: 5px;
+      font-size: 15px;
+    }
+  }
 }
