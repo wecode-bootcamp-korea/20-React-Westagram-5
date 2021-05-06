@@ -1,5 +1,6 @@
 import React from 'react';
 import Comment from '../../Comments/Comment';
+// import COMMENT from '../../Comments/CommentData';
 import './Article.scss';
 
 class ArticleHoonic extends React.Component {
@@ -11,6 +12,21 @@ class ArticleHoonic extends React.Component {
     };
   }
 
+  componentDidMount() {
+    fetch('http://localhost:3000/data/hoonic/commentData.json', {
+      method: 'Get',
+    })
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          commentLsit: data,
+        });
+      });
+  }
+  //   this.setState({
+  //     commentList: COMMENT,
+  //   });
+
   addCommentEnter = e => {
     if (this.state.commentValue.length >= 1 && e.key === 'Enter') {
       this.addComment();
@@ -20,16 +36,18 @@ class ArticleHoonic extends React.Component {
   };
 
   addComment = () => {
+    const { commentList, commentValue } = this.state;
     this.setState({
-      commentList: this.state.commentList.concat([this.state.commentValue]),
-      // commentList: [...commentList, commentValue] 스프레이드 연산자
+      commentList: commentList.concat([commentValue]),
       commentValue: '',
     });
   };
 
+  // this.state.commentList.concat([this.state.commentValue])
+  // commentList: [...commentList, commentValue] 스프레이드 연산자
+
   render() {
     const { commentValue, commentList } = this.state;
-    console.log('state >>>>>>>>', this.state);
     return (
       <article>
         <div className="feedHeader">
@@ -63,7 +81,14 @@ class ArticleHoonic extends React.Component {
             <span className="commentID">hoonic</span>
             <span>안녕하세요</span>
             {commentList.map(el => {
-              return <Comment userName={el} comment={el} />;
+              return (
+                <Comment
+                  // comment={el}
+                  key={el.id}
+                  name={el.userName}
+                  content={el.content}
+                />
+              );
             })}
           </div>
         </div>

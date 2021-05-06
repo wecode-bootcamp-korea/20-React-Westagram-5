@@ -7,7 +7,7 @@ class CommentHoonic extends React.Component {
     return (
       <div>
         <span className="commentID">kancho</span>
-        <span> {comment}</span>
+        <span className="commentText"> {comment}</span>
       </div>
     );
   }
