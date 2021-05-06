@@ -1,8 +1,8 @@
 import React from 'react';
-import Nav from './components/Nav';
+import Nav from './components/nav';
+import Aside from './components/aside';
 import Feed from './components/feed';
-import './Main.scss';
-import Aside from './components/Aside';
+import './main.scss';
 
 class Main extends React.Component {
   render() {

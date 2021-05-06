@@ -27,16 +27,9 @@ class Login extends React.Component {
       .then(result => console.log('결과: ', result));
   };
 
-  handleIdInput = e => {
-    this.setState({
-      id: e.target.value,
-    });
-  };
-
-  handlePwInput = e => {
-    this.setState({
-      pw: e.target.value,
-    });
+  inputHendler = e => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
   };
 
   render() {
@@ -50,12 +43,14 @@ class Login extends React.Component {
             <input
               onChange={this.handleIdInput}
               className="inputID"
+              name="id"
               type="text"
               placeholder="전화번호, 사용자 이름 또는 이메일"
             />
             <input
               onChange={this.handlePwInput}
               className="inputPW"
+              name="pw"
               type="password"
               placeholder="비밀번호"
             />

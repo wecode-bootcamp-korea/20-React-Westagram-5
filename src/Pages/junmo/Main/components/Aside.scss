@@ -32,39 +32,12 @@
       color: #aaa;
     }
   }
-  .userRecommend {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-
-    .userRecommendProfile {
-      display: flex;
-      align-items: center;
-
-      .userRecommendImg {
-        img {
-          width: 40px;
-          margin-right: 8px;
-          border-radius: 50%;
-        }
-      }
-      .userRecommendText p:last-child {
-        color: #bbb;
-      }
-    }
-    .userRecommendBtn {
-      p {
-        color: var(--main--point--color);
-        cursor: pointer;
-      }
-    }
-  }
   .info {
     .infoLink {
-      p {
+      li {
         display: inline-block;
         margin-bottom: 5px;
+        margin-right: 5px;
         color: #bbb;
         font-size: 11px;
         cursor: pointer;
