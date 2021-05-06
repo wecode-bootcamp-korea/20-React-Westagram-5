@@ -1,5 +1,5 @@
 import React from 'react';
-import './CommentInput.scss';
+import './commentInput.scss';
 
 class CommentInput extends React.Component {
   constructor() {

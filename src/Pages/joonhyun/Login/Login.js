@@ -12,18 +12,6 @@ class Loginjoonhyun extends React.Component {
     };
   }
 
-  // requestLogin = () => {
-  //   fetch('http://10.58.7.242:8000/users/signUp', {
-  //     method: 'POST',
-  //     body: JSON.stringify({
-  //       email: this.state.idInputValue,
-  //       password: this.state.pwInputValue,
-  //     }),
-  //   })
-  //     .then(response => response.json())
-  //     .then(result => console.log('결과: ', result));
-  // };
-
   handleIdInput = event => {
     this.setState({
       idInputValue: event.target.value,
@@ -41,7 +29,7 @@ class Loginjoonhyun extends React.Component {
     fetch('http://10.58.7.242:8000/users/signIn', {
       method: 'POST',
       headers: {
-        Authorization: 'userInfo',
+        Authorization: 'token',
       },
       body: JSON.stringify({
         email: this.state.idInputValue,

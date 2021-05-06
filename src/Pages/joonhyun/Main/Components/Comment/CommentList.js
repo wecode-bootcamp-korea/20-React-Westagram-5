@@ -1,6 +1,6 @@
 import React from 'react';
 import CommentInputList from './commentInputList';
-import CommentInput from './CommentInput';
+import CommentInput from './commentInput';
 import './CommentList.scss';
 
 class CommentList extends React.Component {
