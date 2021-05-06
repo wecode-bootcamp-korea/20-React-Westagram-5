@@ -11,6 +11,22 @@ class Login extends React.Component {
     };
   }
 
+  fetch = e => {
+    e.preventDefault();
+    fetch('http://10.58.7.242:8000/users/signIn', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: this.state.id,
+        password: this.state.pw,
+      }),
+    })
+      .then(response => {
+        console.log(response);
+        return response.json();
+      })
+      .then(result => console.log('결과: ', result));
+  };
+
   handleIdInput = e => {
     this.setState({
       id: e.target.value,
@@ -30,7 +46,7 @@ class Login extends React.Component {
           <header className="logo">
             <h1>Instagram</h1>
           </header>
-          <form className="inputContainer">
+          <form className="inputContainer" onSubmit={this.fetch}>
             <input
               onChange={this.handleIdInput}
               className="inputID"
