@@ -3,22 +3,26 @@
     {
       "id": "junchi111",
       "reply": "여행 가고 싶으다아~~~~",
-      "time": "20분전"
+      "time": "20분전",
+      "isLike": false
     },
     {
       "id": "koko",
       "reply": "나아두~~",
-      "time": "16분전"
+      "time": "16분전",
+      "isLike": true
     },
     {
       "id": "565sddf212s",
       "reply": "내일 고?",
-      "time": "15분전"
+      "time": "15분전",
+      "isLike": true
     },
     {
       "id": "5221dsa",
       "reply": "고고",
-      "time": "12분전"
+      "time": "12분전",
+      "isLike": false
     }
   ]
 }

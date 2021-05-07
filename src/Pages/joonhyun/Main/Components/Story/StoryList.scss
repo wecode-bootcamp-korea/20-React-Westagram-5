@@ -1,22 +1,24 @@
 @import '../../../../../styles/variables.scss';
 
-.storyHistory {
+.storyPic {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 
-  .storyPic {
-    display: flex;
-    flex-direction: column;
-
-    .storyImgPic {
-      width: 32px;
-      height: 32px;
-      border-radius: 70%;
-    }
+  .storyImgPic {
+    width: 35px;
+    height: 35px;
+    border-radius: 70%;
+    margin: 10px;
   }
-  .storyHistoryInfo {
+  .storyHitoryInfo {
     display: flex;
     flex-direction: column;
+    margin-top: 13px;
+    .id {
+      font-weight: bold;
+    }
+    .time {
+      font-size: 13px;
+      color: grey;
+    }
   }
 }

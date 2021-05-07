@@ -49,9 +49,15 @@ class CommentList extends React.Component {
       <>
         <div className="commentPlus">
           {this.state.mockCommentList.map(element => {
-            const { id, reply, time } = element;
+            const { id, reply, time, isLike } = element;
             return (
-              <CommentInputList key={id} id={id} reply={reply} time={time} />
+              <CommentInputList
+                key={id}
+                id={id}
+                reply={reply}
+                time={time}
+                isLike={isLike}
+              />
             );
           })}
         </div>

@@ -12,14 +12,10 @@ class StoryList extends React.Component {
       <div className="storyHistory">
         <div className="storyPic">
           <img className="storyImgPic" alt={id} src={imgSrc} />
-        </div>
-        <div className="storyHistoryInfo">
-          <div className="userId">
+          <span className="storyHitoryInfo">
             <span className="id"> {id} </span>
-          </div>
-          <div className="usertime">
             <span className="time"> {time} </span>
-          </div>
+          </span>
         </div>
       </div>
     );

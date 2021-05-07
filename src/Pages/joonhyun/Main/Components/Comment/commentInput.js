@@ -8,7 +8,6 @@ class CommentInput extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="inputAcutalComment">
         <span className="inputId">{this.props.id}</span>
