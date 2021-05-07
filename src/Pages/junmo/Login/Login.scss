@@ -1,0 +1,59 @@
+@import '../../../styles/variables.scss';
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $bg-color;
+}
+
+.loginContainer {
+  padding: 50px 50px 20px 50px;
+  background-color: #fff;
+
+  .logo {
+    margin-bottom: 40px;
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  input {
+    display: block;
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 7px;
+    background-color: $bg-color;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+  }
+
+  .loginBtn {
+    display: block;
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 50px;
+    background-color: rgb(0, 149, 246);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .loginBtn:disabled {
+    opacity: 0.3;
+  }
+
+  .forgotPwBtn {
+    display: block;
+    margin: 0 auto;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    color: $point-color;
+    cursor: pointer;
+  }
+}

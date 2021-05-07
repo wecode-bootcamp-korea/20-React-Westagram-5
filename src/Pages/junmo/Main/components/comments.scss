@@ -1,0 +1,18 @@
+@import '../../../../styles/variables.scss';
+
+.addComments {
+  display: flex;
+  justify-content: space-between;
+
+  .commentInput {
+    width: 90%;
+    border: none;
+  }
+
+  button {
+    padding: 0;
+    background-color: #fff;
+    border: none;
+    color: $point-color;
+  }
+}

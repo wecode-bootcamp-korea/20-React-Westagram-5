@@ -1,0 +1,52 @@
+.rightAside {
+  position: fixed;
+  top: 80px;
+  right: 18%;
+  width: 20%;
+
+  .profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+    .profileImg {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 55px;
+        margin-right: 15px;
+        border-radius: 50%;
+      }
+    }
+  }
+  .recommend {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    div:first-child p {
+      display: inline-block;
+      font-weight: 600;
+      color: #aaa;
+    }
+  }
+  .info {
+    .infoLink {
+      li {
+        display: inline-block;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        color: #bbb;
+        font-size: 11px;
+        cursor: pointer;
+      }
+    }
+    .copyright {
+      margin-top: 5px;
+      color: #bbb;
+      font-size: 11px;
+    }
+  }
+}
