@@ -2,6 +2,29 @@ import React from 'react';
 import './Nav.scss';
 
 class Nav extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      imgSrc: [
+        {
+          id: 'navigator',
+          img:
+            'https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png',
+        },
+        {
+          id: 'heart',
+          img:
+            'https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png',
+        },
+        {
+          id: 'myPage',
+          img:
+            'https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png',
+        },
+      ],
+    };
+  }
+
   render() {
     return (
       <nav className="navJoonhyun">
@@ -16,21 +39,14 @@ class Nav extends React.Component {
           <i className="fas fa-search"></i>
         </div>
         <div className="rightWrapper">
-          <img
-            className="pic"
-            alt="navigator"
-            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
-          />
-          <img
-            className="pic"
-            alt="heart"
-            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-          />
-          <img
-            className="pic"
-            alt="myPage"
-            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
-          />
+          {this.state.imgSrc.map(element => {
+            const { id, img } = element;
+            return (
+              <>
+                <img className="pic" alt={id} src={img} />
+              </>
+            );
+          })}
         </div>
       </nav>
     );

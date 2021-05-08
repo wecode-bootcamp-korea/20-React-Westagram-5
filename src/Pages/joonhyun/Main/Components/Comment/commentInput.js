@@ -2,11 +2,6 @@ import React from 'react';
 import './commentInput.scss';
 
 class CommentInput extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-
   render() {
     return (
       <div className="inputAcutalComment">

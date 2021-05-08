@@ -23,26 +23,24 @@ class Article extends React.Component {
   render() {
     return (
       <article className="articleJoonhyun">
-        {this.state.feedList.map(element => {
-          const { id, imgSrc } = element;
+        {this.state.feedList.map(feedInfo => {
+          const { id, imgSrc } = feedInfo;
           return (
             <div className="feedList">
               <div className="profileTop">
                 <div className="profileImg">
                   <a href="#/">
-                    <img className="imgJoon" alt={id} src={imgSrc} />
+                    <img className="imgJoon" key={id} alt={id} src={imgSrc} />
                   </a>
                   <a href="#/">
                     <span className="userId">{id}</span>
                   </a>
                 </div>
                 <span>
-                  <button className="moreBtn"> ... </button>{' '}
+                  <button className="moreBtn"> ... </button>
                 </span>
               </div>
-
               <img className="feedImg" alt="feedImg" src={imgSrc} />
-
               <div className="statusCheck">
                 <div className="leftStatusCheck">
                   <span className="statusHeart">

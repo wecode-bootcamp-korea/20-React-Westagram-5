@@ -24,13 +24,9 @@ class CommentList extends React.Component {
   }
 
   inputHandler = e => {
-    if (e.key === 'Enter') {
-      this.addComment();
-    } else {
-      this.setState({
-        inputComment: e.target.value,
-      });
-    }
+    e.key === 'Enter'
+      ? this.addComment()
+      : this.setState({ inputComment: e.target.value });
   };
 
   addComment = () => {
@@ -45,11 +41,12 @@ class CommentList extends React.Component {
   };
 
   render() {
+    console.log(this.state);
     return (
       <>
         <div className="commentPlus">
-          {this.state.mockCommentList.map(element => {
-            const { id, reply, time, isLike } = element;
+          {this.state.mockCommentList.map(commentInfo => {
+            const { id, reply, time, isLike } = commentInfo;
             return (
               <CommentInputList
                 key={id}

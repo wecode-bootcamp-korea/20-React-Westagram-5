@@ -31,7 +31,6 @@ class Story extends React.Component {
             <span className="viewAll">모두보기</span>
           </a>
         </div>
-
         <div className="storyHistory">
           {this.state.storyList.map(element => {
             const { FK, id, time, imgSrc } = element;

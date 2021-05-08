@@ -12,15 +12,9 @@ class Loginjoonhyun extends React.Component {
     };
   }
 
-  handleIdInput = event => {
+  handleInput = event => {
     this.setState({
-      idInputValue: event.target.value,
-    });
-  };
-
-  handlePwInput = event => {
-    this.setState({
-      pwInputValue: event.target.value,
+      [event.target.name]: event.target.value,
     });
   };
 
@@ -38,7 +32,7 @@ class Loginjoonhyun extends React.Component {
     })
       .then(response => response.json())
       .then(result => {
-        if (result.toke) {
+        if (result.token) {
           localStorage.setItem('wtw-token', result.token);
         }
 
@@ -53,6 +47,10 @@ class Loginjoonhyun extends React.Component {
   };
 
   render() {
+    const validationInfo = {
+      idValidation: this.state.idInputValue.indexOf('@') !== -1,
+      pwValidation: this.state.pwInputValue.length > 5,
+    };
     return (
       <div className="loginJoonhyun">
         <main className="logMain" role="main">
@@ -62,26 +60,24 @@ class Loginjoonhyun extends React.Component {
               id="userId"
               type="text"
               placeholder="전화번호, 사용자 이름 또는 이메일"
-              onChange={this.handleIdInput}
+              onChange={this.handleInput}
+              name="idInputValue"
             />
             <input
               id="userPw"
               type="password"
               placeholder="비밀번호"
-              onChange={this.handlePwInput}
+              onChange={this.handleInput}
+              name="pwInputValue"
             />
             <button
               className={
-                this.state.idInputValue.indexOf('@') !== -1 &&
-                this.state.pwInputValue.length > 5
+                validationInfo.idValidation && validationInfo.pwValidation
                   ? 'changeButtonColor'
                   : 'keepButtonColor'
               }
               disabled={
-                this.state.idInputValue.indexOf('@') !== -1 &&
-                this.state.pwInputValue.length > 5
-                  ? false
-                  : true
+                !validationInfo.idValidation && validationInfo.pwValidation
               }
               onClick={this.goToMain}
               type="button"
