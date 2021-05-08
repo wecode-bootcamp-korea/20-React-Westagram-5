@@ -31,17 +31,15 @@ class CommentList extends React.Component {
 
   addComment = () => {
     this.setState({
-      commentList: this.state.commentList.concat({
-        id: 'wecode20',
-        time: '10분',
-        comment: this.state.inputComment,
-      }),
+      commentList: [
+        ...this.state.commentList,
+        { id: 'wecode20', time: '10분', comment: this.state.inputComment },
+      ],
       inputComment: '',
     });
   };
 
   render() {
-    console.log(this.state);
     return (
       <>
         <div className="commentPlus">

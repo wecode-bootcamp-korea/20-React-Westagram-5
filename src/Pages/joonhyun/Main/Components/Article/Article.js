@@ -30,7 +30,7 @@ class Article extends React.Component {
               <div className="profileTop">
                 <div className="profileImg">
                   <a href="#/">
-                    <img className="imgJoon" key={id} alt={id} src={imgSrc} />
+                    <img className="imgJoon" alt={id} src={imgSrc} />
                   </a>
                   <a href="#/">
                     <span className="userId">{id}</span>
@@ -59,7 +59,6 @@ class Article extends React.Component {
                   </span>
                 </div>
               </div>
-
               <div className="otherUsers">
                 <a href="#/">
                   <img className="imgJoon" alt="junchi211" src={imgSrc} />
