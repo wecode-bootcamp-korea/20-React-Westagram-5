@@ -1,0 +1,22 @@
+{
+  "storyListData": [
+    {
+      "FK": 1,
+      "id": "tokyo",
+      "time": "16분전",
+      "imgSrc": "/images/joonhyun/tokyo.jpg"
+    },
+    {
+      "FK": 2,
+      "id": "paris",
+      "time": "20분전",
+      "imgSrc": "/images/joonhyun/paris.jpg"
+    },
+    {
+      "FK": 3,
+      "id": "Nhatrang",
+      "time": "23분전",
+      "imgSrc": "/images/joonhyun/nhatrang.jpg"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+@import '../../../styles/variables.scss';
+
+.loginJoonhyun {
+  .logMain {
+    width: 800px;
+    height: 800px;
+    margin: 10px auto;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 1px;
+    .logTitle {
+      @include center;
+      margin-top: 50px;
+      margin-bottom: 80px;
+      font-family: 'Lobster', cursive;
+      font-size: 100px;
+      font-weight: bold;
+    }
+    form#idPw {
+      @include columSpaceAround;
+      width: 600px;
+      height: 350px;
+      margin: 0 auto;
+      border-radius: 3px;
+      font-size: 16px;
+      color: $textBlackColor;
+
+      input {
+        @include center;
+        width: 606px;
+        height: 84px;
+        padding: 10px;
+        border: 1px solid $borderGrey;
+        border-radius: 3px;
+        font-size: 25px;
+
+        &:hover {
+          border-color: $borderGrey;
+        }
+        &:focus {
+          outline: none;
+          border: 1px solid $borderGrey;
+        }
+      }
+      button.keepButtonColor {
+        background-color: $buttonBackground;
+        width: 628.97px;
+        height: 70px;
+        border: none;
+        border-radius: 3px;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+
+        &:focus {
+          outline: none;
+          border: 1px solid rgb(178, 223, 252);
+        }
+      }
+      button.changeButtonColor {
+        background-color: rgb(25, 151, 243);
+        width: 628.97px;
+        height: 70px;
+        border: none;
+        border-radius: 3px;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+
+        &:focus {
+          outline: none;
+          border: 1px solid rgb(25, 151, 243);
+        }
+      }
+    }
+
+    footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 100px;
+
+      .lossPw {
+        @include center;
+        text-decoration: none;
+        font-size: 26px;
+        color: #00376b;
+      }
+      &:link {
+        color: #00376b;
+      }
+      &:visited {
+        color: #00376b;
+      }
+    }
+  }
+}

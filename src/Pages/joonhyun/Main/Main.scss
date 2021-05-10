@@ -1,0 +1,54 @@
+.MainJoonhyun {
+  main {
+    height: 1000px;
+    background-color: rgb(250, 250, 250);
+  }
+
+  .mainRight .myAccount {
+    display: flex;
+    align-items: center;
+  }
+
+  .mainRight {
+    position: fixed;
+    top: 105px;
+    right: 150px;
+    width: 250px;
+    height: 500px;
+  }
+
+  .mainRight .myAccount .spainPic {
+    width: 50px;
+    height: 50px;
+    border-radius: 70%;
+  }
+
+  .mainRight .myAccount a {
+    text-decoration-line: none;
+  }
+
+  .mainRight .myAccount .userId {
+    text-decoration-line: none;
+    margin-left: 10px;
+    font-size: 15px;
+    color: black;
+  }
+  .mainRight .myAccount .userID :link {
+    color: black;
+  }
+  .mainRight .myAccount .userID :visited {
+    color: black;
+  }
+
+  footer .detail {
+    margin-top: 10px;
+    font-size: 15px;
+    color: rgb(195, 195, 195);
+  }
+
+  footer .copyright {
+    margin-top: 20px;
+    font-size: 15px;
+    color: rgb(195, 195, 195);
+  }
+}
