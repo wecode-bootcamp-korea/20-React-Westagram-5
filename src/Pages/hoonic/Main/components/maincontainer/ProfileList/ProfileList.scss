@@ -1,0 +1,23 @@
+.profileList {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 614px;
+  height: 118px;
+  margin: 0px 0px 24px 0px;
+  padding: 16px 0px;
+  top: 0;
+  border: 1px solid #dbdbdb;
+  background-color: white;
+  border-radius: 3px;
+
+  .profileIcon {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .profileIcon img {
+    width: 56px;
+    height: 56px;
+    border-radius: 70%;
+  }
+}

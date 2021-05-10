@@ -1,0 +1,20 @@
+.mainHoonic {
+  background: #fafafa;
+  position: relative;
+
+  .mainContainer {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  main {
+    padding-top: 30px;
+    display: flex;
+  }
+
+  .feedContainer {
+    display: inline-block;
+    width: 614px;
+    margin-right: 28px;
+  }
+}

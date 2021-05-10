@@ -1,0 +1,77 @@
+.loginHoonic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  background-color: #f7f7f7;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 330px;
+    height: 350px;
+    border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+    background-color: white;
+
+    h1.logoText {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-family: 'Lobster', cursive;
+      font-size: 45px;
+      font-weight: 700;
+    }
+
+    .input {
+      text-align: center;
+
+      /*id,pw 상자 */
+      #id {
+        width: 258px;
+        height: 36px;
+        padding: 9px 0 7px 8px;
+        margin-top: 7px;
+        border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+        box-sizing: border-box;
+        background-color: #f7f7f7;
+        outline-color: #dbdbdb;
+        outline-width: 1px;
+        font-size: 12px;
+      }
+
+      #pw {
+        width: 258px;
+        height: 36px;
+        padding: 9px 0 7px 8px;
+        margin-top: 7px;
+        border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+        box-sizing: border-box;
+        background-color: #f7f7f7;
+        outline-color: #dbdbdb;
+        outline-width: 1px;
+        font-size: 12px;
+      }
+    }
+    /* 버튼 상자 */
+    Button {
+      width: 258px;
+      height: 36px;
+      margin-top: 15px;
+      margin-bottom: 70px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      background-color: #0095f6;
+      color: white;
+      outline: none;
+
+      &:disabled {
+        background-color: #bfdffd;
+      }
+    }
+
+    footer {
+      font-size: 13px;
+    }
+  }
+}
