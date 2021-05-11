@@ -1,0 +1,184 @@
+@import '../../../styles/common.scss';
+
+.Headerjunghyun {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 0px;
+  padding: 0px 0px 0px 100px;
+  border-bottom: 1px solid lightgray;
+  width: 1000px;
+
+  .westagramImageAndLogo {
+    display: flex;
+    align-items: center;
+
+    .westagramImage {
+      margin-right: 10px;
+      padding-right: 10px;
+      border-right: 1px solid black;
+      font-size: 35px;
+    }
+
+    .westagramLogo {
+      a {
+        text-decoration-line: none;
+      }
+
+      h1 {
+        margin: 0;
+        color: black;
+        font-size: 35px;
+        font-weight: lighter;
+        font-family: 'Lobster', cursive;
+      }
+    }
+  }
+
+  .inputAndSearch {
+    position: relative;
+  }
+
+  .inputAndSearch {
+    i {
+      position: absolute;
+      top: 2px;
+      left: 60px;
+    }
+
+    input {
+      width: 100px;
+      padding-left: 80px;
+      border: 1px solid lightgray;
+      border-radius: 2px;
+    }
+  }
+
+  .topRightMenu {
+    margin: 0 10px;
+    font-size: 20px;
+  }
+}
+
+.Mainjunghyun {
+  display: flex;
+
+  .feedOutline {
+    margin-left: 100px;
+    margin-top: 50px;
+
+    .innerFeedOutline {
+      .feedHead {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0px;
+        padding: 0 20px;
+        border: 1px solid lightgray;
+
+        .userImageAndName {
+          p {
+            display: inline-block;
+          }
+        }
+      }
+
+      div {
+        .feedImage {
+          padding-bottom: 0px;
+          border: 1px solid lightgray;
+        }
+      }
+
+      section {
+        div {
+          .writeComment {
+            margin: 0px;
+            padding: 5px;
+            width: 90%;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.Asidejunghyun {
+  margin-top: 50px;
+
+  .asideTop {
+    display: flex;
+
+    i {
+      margin-left: 20px;
+      margin-right: 10px;
+      padding-top: 18px;
+    }
+  }
+
+  .asideStoryBox {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    padding: 0px;
+    border: 1px solid lightgray;
+    width: 230px;
+
+    article {
+      margin: 0px;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      .asideStoryMenu {
+        display: flex;
+        justify-content: space-between;
+      }
+      .asideStoryList {
+        display: flex;
+
+        i {
+          margin-top: 18px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  .asideRecommendBox {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    padding: 0px;
+    border: 1px solid lightgray;
+    width: 230px;
+
+    article {
+      margin: 0px;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      .asideRecommendMenu {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .asideRecommendList {
+        display: flex;
+        justify-content: space-between;
+
+        div {
+          display: flex;
+        }
+
+        i {
+          margin-top: 18px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  footer {
+    margin-left: 20px;
+    width: 230px;
+  }
+}
